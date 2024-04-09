@@ -1,5 +1,5 @@
 import unittest
-from currency_converter import dollar_to_rupee, rupee_to_dollar
+from currency_converter import dollar_to_rupee 
 
 class TestCurrencyConversion(unittest.TestCase):
 
