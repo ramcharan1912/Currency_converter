@@ -17,7 +17,6 @@ class TestCurrencyConversion(unittest.TestCase):
      def test_negative_input_dollar_to_rupee(self):
         with self.assertRaises(ValueError):
             dollar_to_rupee(-10)
-
    
      def test_zero_input_dollar_to_rupee(self):
         self.assertEqual(dollar_to_rupee(0), 0)
