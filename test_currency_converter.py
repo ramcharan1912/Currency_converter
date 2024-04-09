@@ -13,7 +13,11 @@ class TestCurrencyConversion(unittest.TestCase):
 
       def test_non_numeric_input_dollar_to_rupee(self):
         with self.assertRaises(ValueError):
-            dollar_to_rupee('value')       
+            dollar_to_rupee('value') 
+
+      def test_negative_input_dollar_to_rupee(self):
+        with self.assertRaises(ValueError):
+            dollar_to_rupee(-10)            
    
 
 if __name__ == '__main__':
