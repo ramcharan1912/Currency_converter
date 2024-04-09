@@ -13,5 +13,8 @@ def dollar_to_rupee(amount):
 
 
 def rupee_to_dollar(amount):
- 
+
+    if amount == '':
+        raise ValueError("Input cannot be blank")
+
     return amount / 74
