@@ -1,0 +1,45 @@
+# name: Currency Converter Tests
+
+# on: [push, pull_request]
+
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Checkout repository
+#       uses: actions/checkout@v2
+
+#     - name: Set up Python
+#       uses: actions/setup-python@v2
+#       with:
+#         python-version: 3.8
+
+#     - name: Install dependencies
+#       run: pip install -r requirements.txt  # Assuming you have a requirements.txt file with necessary packages
+
+#     - name: Run unit tests
+#       run: python -m unittest discover -s tests -p '*_test.py'
+
+name: Currency Converter Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9 
+
+    - name: Run tests
+      run: |
+        python test_currency_converter.py
