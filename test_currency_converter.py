@@ -1,5 +1,5 @@
 import unittest
-from currency_converter import dollar_to_rupee 
+from currency_converter import dollar_to_rupee, rupee_to_dollar 
 
 class TestCurrencyConversion(unittest.TestCase):
 
@@ -17,7 +17,11 @@ class TestCurrencyConversion(unittest.TestCase):
 
       def test_negative_input_dollar_to_rupee(self):
         with self.assertRaises(ValueError):
-            dollar_to_rupee(-10)            
+            dollar_to_rupee(-10) 
+
+      def test_rupee_to_dollar(self):
+        self.assertAlmostEqual(rupee_to_dollar(740), 10)
+        self.assertAlmostEqual(rupee_to_dollar(1480), 20)                 
    
 
 if __name__ == '__main__':
