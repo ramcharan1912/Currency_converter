@@ -13,5 +13,5 @@ def dollar_to_rupee(amount):
 
 
 def rupee_to_dollar(amount):
-
+ 
     return amount / 74
