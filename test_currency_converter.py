@@ -26,7 +26,11 @@ class TestCurrencyConversion(unittest.TestCase):
       def test_blank_input_rupee_to_dollar(self):
           with self.assertRaises(ValueError):
             rupee_to_dollar('')                  
-   
+         
+      def test_non_numeric_input_rupee_to_dollar(self):
+        with self.assertRaises(ValueError):
+            rupee_to_dollar('xyz')
+
 
 if __name__ == '__main__':
     unittest.main()
