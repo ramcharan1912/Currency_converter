@@ -20,4 +20,7 @@ def rupee_to_dollar(amount):
     if not isinstance(amount, (int, float)):
         raise ValueError("Input must be numeric")	
 
+    if amount < 0:
+        raise ValueError("Negative input not allowed")	
+
     return amount / 74
